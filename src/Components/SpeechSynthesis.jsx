@@ -40,7 +40,7 @@ const SpeechSynthesisComponent = ({ textToSpeak }) => {
           </option>
         ))}
       </select>
-      <button className='button2' onClick={handleSpeak}>Speak</button>
+      <button className='button2' onClick={handleSpeak}>Listen</button>
     </div>
   );
 };

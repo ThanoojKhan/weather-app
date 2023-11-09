@@ -32,6 +32,9 @@ export default function App() {
   return (
     <>
     <div  className="App ">
+   <div style={{display:'flex',justifyContent:'center', paddingTop:'50px'}}>
+    <LocationInput fetchData={fetchData} setLat={setLat} setLong={setLong}/>
+    </div>
       {(typeof data?.main != 'undefined') ? (
         <Weather weatherData={data} />
       ) : (
@@ -41,9 +44,6 @@ export default function App() {
         </Dimmer>
      </div>
       )}
-   <div style={{display:'flex',justifyContent:'center'}}>
-    <LocationInput fetchData={fetchData} setLat={setLat} setLong={setLong}/>
-    </div>
     </div>
     </>
   );
