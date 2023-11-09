@@ -39,7 +39,7 @@ export default function App() {
       ) : (
         <div>
         <Dimmer active>
-          <Loader>Loading..</Loader>
+          <Loader>Loading...</Loader>
         </Dimmer>
      </div>
       )}
