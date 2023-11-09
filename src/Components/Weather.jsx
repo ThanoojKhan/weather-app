@@ -12,7 +12,7 @@ export function Weather({ weatherData }) {
     <div className="root">
       <div className="main" 
       style={{backgroundImage:`url(${"https://remeng.rosselcdn.net/sites/default/files/dpistyles_v2/rem_16_9_1124w/2023/02/26/node_459922/13050551/public/2023/02/26/B9733585574Z.1_20230226162236_000%2BGGUMA1787.1-0.jpg?itok=BgnN-F-m1677426044"})`}}>
-        <div className="top">
+        <div className="top" style={{background : "white",fontWeight:"bold"}}>
           <p className="header">{weatherData?.name}</p>
           <Button
             className="button"
