@@ -9,7 +9,7 @@ const SpeechSynthesisComponent = ({ textToSpeak }) => {
       const utterance = new SpeechSynthesisUtterance(textToSpeak);
       utterance.voice = selectedVoice;
       utterance.onend = () => {
-        window.speechSynthesis.cancel(); 
+        window.speechSynthesis.cancel();
       };
       window.speechSynthesis.speak(utterance);
     }
@@ -24,7 +24,7 @@ const SpeechSynthesisComponent = ({ textToSpeak }) => {
     };
 
     window.speechSynthesis.addEventListener('voiceschanged', updateVoices);
-    updateVoices(); 
+    updateVoices();
 
     return () => {
       window.speechSynthesis.removeEventListener('voiceschanged', updateVoices);

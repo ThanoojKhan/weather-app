@@ -10,9 +10,9 @@ export function Weather({ weatherData }) {
 
   return (
     <div className="root">
-      <div className="main" 
-      style={{backgroundImage:`url(${"https://remeng.rosselcdn.net/sites/default/files/dpistyles_v2/rem_16_9_1124w/2023/02/26/node_459922/13050551/public/2023/02/26/B9733585574Z.1_20230226162236_000%2BGGUMA1787.1-0.jpg?itok=BgnN-F-m1677426044"})`}}>
-        <div className="top" style={{background : "white",fontWeight:"bold"}}>
+      <div className="main"
+        style={{ backgroundImage: `url(${"https://remeng.rosselcdn.net/sites/default/files/dpistyles_v2/rem_16_9_1124w/2023/02/26/node_459922/13050551/public/2023/02/26/B9733585574Z.1_20230226162236_000%2BGGUMA1787.1-0.jpg?itok=BgnN-F-m1677426044"})` }}>
+        <div className="top" style={{ background: "white", fontWeight: "bold" }}>
           <p className="header">{weatherData?.name}</p>
           <Button
             className="button"
@@ -32,7 +32,7 @@ export function Weather({ weatherData }) {
 
         <div className="flex">
           <p className="temp" >Temprature: {weatherData?.main?.temp} &deg;C</p>
-          <p className="temp" style={{color : "black",fontWeight:"bold"}}>Humidity: {weatherData?.main?.humidity} %</p>
+          <p className="temp" style={{ color: "black", fontWeight: "bold" }}>Humidity: {weatherData?.main?.humidity} %</p>
         </div>
 
         <div className="flex">
@@ -42,7 +42,7 @@ export function Weather({ weatherData }) {
               "en-IN"
             )}
           </p>
-          <p className="sunrise-sunset" style={{color : "black",fontWeight:"bold"}}>
+          <p className="sunrise-sunset" style={{ color: "black", fontWeight: "bold" }}>
             Sunset:{" "}
             {new Date(weatherData?.sys?.sunset * 1000).toLocaleTimeString(
               "en-IN"
@@ -55,7 +55,7 @@ export function Weather({ weatherData }) {
           ).toLocaleTimeString('en-IN')}, Temperature is ${weatherData?.main?.temp}, Humidity is ${weatherData?.main?.humidity}`}
         />
 
-      </div>  
+      </div>
     </div>
   );
 }

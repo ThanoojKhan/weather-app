@@ -46,10 +46,8 @@ export function LocationInput({ setLat, setLong, fetchData }) {
             placeholder={location.split(',')[0] || 'Enter Location'}
             className=""
           />
-
         </div>
         <div className="listDiv">
-
           <ul className="list">
             {sugg && locationSuggestions.map((suggestion) => (
               <li key={suggestion?.id}>
@@ -70,7 +68,6 @@ export function LocationInput({ setLat, setLong, fetchData }) {
             ))}
           </ul>
         </div>
-
       </div>
       <div><button className="search" onClick={fetchData}>SEARCH</button></div>
     </div>

@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Recursive&display=swap');
 
-.root{
-    height:500px ;
+.root {
+    height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.main{
+.main {
     justify-content: center;
     align-items: center;
     width: 50%;
@@ -19,7 +19,7 @@
     /* background-color: rgba(40, 40, 40, 0.5); */
 }
 
-.top{
+.top {
     height: 60px;
     background-color: #161515;
     color: rgb(83, 77, 77);
@@ -30,7 +30,7 @@
     justify-content: space-between;
 }
 
-.header{
+.header {
     color: rgb(0, 0, 0);
     margin: 10px 0px 0px 10px;
     font-size: 25px;
@@ -38,7 +38,7 @@
     font-family: 'Recursive', sans-serif;
 }
 
-.day{
+.day {
     padding: 15px;
     color: rgb(255, 255, 255);
     font-family: 'Recursive', sans-serif;
@@ -46,26 +46,26 @@
     font-weight: 600;
 }
 
-.temp{
+.temp {
     padding: 15px;
     color: rgb(255, 255, 255);
     font-family: 'Recursive', sans-serif;
     font-size: 18px;
 }
 
-.flex{
+.flex {
     display: flex;
     justify-content: space-between;
 }
 
-.sunrise-sunset{
+.sunrise-sunset {
     padding: 15px;
     color: rgb(255, 255, 255);
     font-family: 'Recursive', sans-serif;
     font-size: 16px;
 }
 
-.description{
+.description {
     padding: 15px;
     color: rgb(255, 255, 255);
     font-family: 'Recursive', sans-serif;
@@ -73,7 +73,7 @@
     font-weight: 600;
 }
 
-.button2{
+.button2 {
     width: 100px;
     height: 30px;
     font-family: Arial, Helvetica, sans-serif;
@@ -81,14 +81,15 @@
     background-color: dimgray;
     border-radius: 0 10% 0 10%;
     margin: 10px;
-    
+
 }
 
-.speak{
+.speak {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
 }
-.voice{
+
+.voice {
     /* width:; */
     height: 30px;
     font-family: Arial, Helvetica, sans-serif;
