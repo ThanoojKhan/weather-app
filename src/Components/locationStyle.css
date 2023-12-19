@@ -2,12 +2,12 @@
 
 .locationMain {
     display: flex;
-    /* margin-top: 5px; */
-    width: 700px;
+    margin-top: 100px;
+    width: 1000px;
     background-color: #01579b;
     height: 60px;
-    background-color: #161515;
-    color: whitesmoke;
+    background-color: #b9b7b7;
+    color: rgb(0, 0, 0);
     padding: 15px;
     border-radius: 5px 5px 5px 5px;
     font-family: 'Recursive', sans-serif;
@@ -17,8 +17,9 @@
 
 .inputField input {
     background-color: #424242;
-    width: 400px;
+    width: 600px;
     height: 30px;
+    margin-right: 20px;
     color: aliceblue;
     text-align: center;
     padding-left: 10px;
