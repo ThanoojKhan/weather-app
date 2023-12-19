@@ -35,42 +35,41 @@ export function LocationInput({ setLat, setLong, fetchData }) {
   return (
     <div className="locationMain">
       <div className="inputField">
-  <div>
-    <input
-      type="text"
-      onChange={(e) => {
-        setSugg(true);
-        handleLocationSuggestion(e.target.value);
-      }}
-      placeholder={location.split(',')[0] || 'ENTER LOCATION'}
-      className=""
-    />
-    <label className="">{location.split(',')[0] || 'LOCATION'}</label>
-  </div>
-  <div className="listDiv">
-    <ul className="list">
-      {sugg && locationSuggestions.map((suggestion) => (
-        <li key={suggestion?.id}>
-          <button
-            type="button"
-            onClick={() => {
-              setSugg(false);
-              setLocationSuggestions([]);
-              const [long, lat] = suggestion?.geometry.coordinates;
-              setLat(lat);
-              setLong(long);
-              setLocation(suggestion?.place_name);
-              document.getElementById("locationInput").placeholder = suggestion?.place_name;
+        <div>
+          <input
+            type="text"
+            onChange={(e) => {
+              setSugg(true);
+              handleLocationSuggestion(e.target.value);
             }}
-          >
-            {suggestion?.place_name}
-          </button>
-        </li>
-      ))}
-    </ul>
-  </div>
-</div>
-
+            placeholder={location.split(',')[0] || 'ENTER LOCATION'}
+            className=""
+          />
+          <label className="">{location.split(',')[0] || 'LOCATION'}</label>
+        </div>
+        <div className="listDiv">
+          <ul className="list">
+            {sugg && locationSuggestions.map((suggestion) => (
+              <li key={suggestion?.id}>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setSugg(false);
+                    setLocationSuggestions([]);
+                    const [long, lat] = suggestion?.geometry.coordinates;
+                    setLat(lat);
+                    setLong(long);
+                    setLocation(suggestion?.place_name);
+                    document.getElementById("locationInput").placeholder = suggestion?.place_name;
+                  }}
+                >
+                  {suggestion?.place_name}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
       <div><button className="search" onClick={fetchData}>SEARCH</button></div>
     </div>
   )
