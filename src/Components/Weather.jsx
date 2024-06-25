@@ -1,7 +1,7 @@
 import "./Style.css";
 import { Button } from "semantic-ui-react";
 import moment from "moment";
-import SpeechSynthesisComponent from "./SpeechSynthesis";
+// import SpeechSynthesisComponent from "./SpeechSynthesis";
 
 export function Weather({ weatherData }) {
   const refresh = () => {
@@ -11,7 +11,7 @@ export function Weather({ weatherData }) {
   return (
     <div className="root">
       <div className="main"
-        style={{ backgroundImage: `url(${"https://cardinalwxservice.com/wp-content/uploads/2019/09/Fall-1.jpg"})` }}>
+        style={{ background: "white" }}>
         <div className="top" style={{ background: "white", fontWeight: "bold" }}>
           <p className="header">{weatherData?.name}</p>
           <Button
@@ -24,19 +24,19 @@ export function Weather({ weatherData }) {
           />
         </div>
         <div className="flex">
-          <p className="day">
+          <p className="day" style={{ color: "black", fontWeight: "bold" }}>
             {moment().format("dddd")}, <span>{moment().format("LL")}</span>
           </p>
-          <p className="description">{weatherData?.weather[0].main}</p>
+          <p className="description" style={{ color: "black", fontWeight: "bold" }}>{weatherData?.weather[0].main}</p>
         </div>
 
         <div className="flex">
-          <p className="temp" >Temprature: {weatherData?.main?.temp} &deg;C</p>
+          <p className="temp" style={{ color: "black", fontWeight: "bold" }}>Temprature: {weatherData?.main?.temp} &deg;C</p>
           <p className="temp" style={{ color: "black", fontWeight: "bold" }}>Humidity: {weatherData?.main?.humidity} %</p>
         </div>
 
         <div className="flex">
-          <p className="sunrise-sunset" >
+          <p className="sunrise-sunset" style={{ color: "black", fontWeight: "bold" }}>
             Sunrise:{" "}
             {new Date(weatherData?.sys?.sunrise * 1000).toLocaleTimeString(
               "en-IN"
@@ -49,11 +49,11 @@ export function Weather({ weatherData }) {
             )}
           </p>
         </div>
-        <SpeechSynthesisComponent
+        {/* <SpeechSynthesisComponent
           textToSpeak={`The weather data is as follows: Date is ${new Date(
             weatherData?.sys?.sunset * 1000
           ).toLocaleTimeString('en-IN')}, Temperature is ${weatherData?.main?.temp}, Humidity is ${weatherData?.main?.humidity}`}
-        />
+        /> */}
 
       </div>
     </div>
